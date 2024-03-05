@@ -1,0 +1,64 @@
+      
+           SECTION 3
+
+     HOTEL MANAGEMENT DATABASE
+
+  Analyses
+
+1) room_managements
+    id (pk) int,
+    type varchar(200),
+    status varchar(200),
+    price int
+
+2) room_reservations
+    id (pk) int,
+    arrival_date date,
+    depature_date date,
+    number_of_guest int,
+    special_references varchar,
+    reservation_status varchar(200),
+    chosen_room_id (fk) int
+
+3) customer_managements
+    id (pk) int,
+    surname varchar(200),
+    first_name varchar(200),
+    contact varchar(200),
+    email varchar(200),
+    booking_history_id (fk) int
+
+4) hotel_services
+    id (pk) int,
+    service varchar(200),
+    reserved_id (fk) int
+
+5) service_details
+    id (pk) int,
+    description varchar(200),
+    opening_hours varchar(200),
+    price int,
+    service_id (fk) int
+
+6) payments
+    id (pk) int,
+    cost varchar(200),
+    additional_services varcahr(200),
+    taxes varchar(200),
+    reservation_id (fk) int
+
+7) payment_methods
+    id (pk) int,
+    method_name varchar(200),
+    detail varchar(200),
+    status varchar(200),
+    payments_id (fk) int
+
+8) feedbacks
+    id (pk) int,
+    rate varchar(200),
+    comment varchar(200),
+    feedback_date date
+    client_id (fk),
+    reserve_id (fk)
+        
